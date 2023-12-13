@@ -1,4 +1,23 @@
 <?php
+$useremail = "";
+$message = "";
+
+
+// Funzione per validazione di indirizzo email
+function validateEmail($useremail) {
+    return filter_var($useremail, FILTER_VALIDATE_EMAIL);
+}
+
+if (isset($_POST['email'])) {
+    $useremail = $_POST['email'];
+    if (empty($useremail)) {
+        $message = "Inserisci un indirizzo email.";
+    } elseif (!validateEmail($useremail)) {
+        $message = "L'indirizzo email non è valido.";
+    } else {
+        $message = "Indirizzo email valido";   
+    }
+}
 ?>
 
 <!DOCTYPE html>
@@ -13,7 +32,17 @@
 </head>
 
 <body>
-
+    <div class="container mt-5 text-center">
+        <h1 class="mb-3">Iscriviti alla nostra newsletter!</h1>
+        <form method="post" action="index.php">
+            <div class="mb-3">
+                <label for="email">Inserisci qui la tua mail</label>
+                <input type="text" id="email" name="email" value="<?php echo $useremail; ?>" placeholder="indirizzo email">
+                <span><?php echo $message; ?></span>
+            </div>
+            <button class="btn btn-success" type="submit">Invia</button>
+        </form>
+    </div>
 </body>
 
 </html>

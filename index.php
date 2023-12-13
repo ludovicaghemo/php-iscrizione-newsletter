@@ -21,7 +21,7 @@ include_once __DIR__ . "/functions.php"
             <div class="mb-3">
                 <label for="email">Inserisci qui la tua mail</label>
                 <input type="text" id="email" name="email" value="<?php echo $useremail; ?>" placeholder="indirizzo email">
-                <span><?php echo $message; ?></span>
+                <span class="ms-4 alert <?php echo $messageAlert; ?>"><?php echo $message; ?></span>
             </div>
             <button class="btn btn-success" type="submit">Invia</button>
         </form>

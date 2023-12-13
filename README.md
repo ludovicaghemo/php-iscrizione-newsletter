@@ -17,8 +17,8 @@ Utilizzare la classe alert-success per indicare un esito positivo e alert-danger
 
 **BONUS:**
 **Milestone 4: (Redirect)**
-- [] Implementare un redirect a una pagina di ringraziamento (thankyou.php) in caso di esito positivo.
-- [] Utilizzare la session PHP per memorizzare l'indirizzo email registrato durante la procedura di validazione.
+- [x] Implementare un redirect a una pagina di ringraziamento (thankyou.php) in caso di esito positivo.
+- [x] Utilizzare la session PHP per memorizzare l'indirizzo email registrato durante la procedura di validazione.
 
 **Milestone 5: (Visualizzare valore errato)**
 - [] Nel caso di esito negativo, garantire che il valore inserito precedentemente nel campo di input rimanga visibile.

@@ -1,4 +1,7 @@
 <?php
+session_start();
+//var_dump($_SESSION);
+
 $useremail = "";
 $message = "";
 $messageAlert = "";
@@ -18,8 +21,11 @@ if (isset($_POST['email'])) {
         $message = "Indirizzo email non valido!";
         $messageAlert = "alert-danger";
     } else {
-        $message = "Indirizzo email valido";
-        $messageAlert = "alert-success";   
+        //$message = "Indirizzo email valido";
+        //$messageAlert = "alert-success";
+        $_SESSION['savedEmail'] = $useremail;
+        header("Location: thankyou.php"); 
+        die;  
     }
 }
 ?>

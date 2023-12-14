@@ -18,7 +18,7 @@ $useremail = $_SESSION['savedEmail'];
 
     <div class="container text-center my-5">
         <h1 class="alert alert-success">Iscrizione effettuata con successo!</h1>
-        <h2>Ciao <?php echo $useremail ?>!</h2>
+        <h2 class="mb-4">Ciao <?php echo $useremail ?>!</h2>
         <h3>Ti ringraziamo per la fiducia :-) </h3>
     </div>
 

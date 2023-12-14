@@ -1,6 +1,9 @@
 <?php
-session_start();
-//var_dump($_SESSION);
+if (!isset($_SESSION)) {
+    session_start();
+    // var_dump($_SESSION); 
+}
+
 
 $useremail = "";
 $message = "";
@@ -8,10 +11,11 @@ $messageAlert = "";
 
 
 // Funzione per validazione di indirizzo email
-function validateEmail($useremail) {
+function validateEmail($useremail)
+{
     return filter_var($useremail, FILTER_VALIDATE_EMAIL);
 }
-
+//Per capire se utente ha fatto submit
 if (isset($_POST['email'])) {
     $useremail = $_POST['email'];
     if (empty($useremail)) {
@@ -24,8 +28,7 @@ if (isset($_POST['email'])) {
         //$message = "Indirizzo email valido";
         //$messageAlert = "alert-success";
         $_SESSION['savedEmail'] = $useremail;
-        header("Location: thankyou.php"); 
-        die;  
+        header("Location: ./thankyou.php");
+        die;
     }
 }
-?>

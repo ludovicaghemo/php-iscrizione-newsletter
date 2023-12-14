@@ -22,7 +22,7 @@ Utilizzare la classe alert-success per indicare un esito positivo e alert-danger
 
 **Milestone 5: (Visualizzare valore errato)**
 - [x] Nel caso di esito negativo, garantire che il valore inserito precedentemente nel campo di input rimanga visibile.
-- [] Sfruttare le variabili GET per mantenere e visualizzare l'indirizzo email errato nell'input.
+- [x] Sfruttare le variabili GET per mantenere e visualizzare l'indirizzo email errato nell'input.
 
 ![preview1](img/empty.png)
 ![preview1](img/invalid.png)

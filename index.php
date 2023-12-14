@@ -1,6 +1,11 @@
 <?php
 // include_once perchè si tratta di un file con una funzione
-include_once __DIR__ . "/functions.php"
+include_once __DIR__ . "/functions.php";
+
+if (!isset($_SESSION)) {
+    session_start();
+    // var_dump($_SESSION); 
+}
 ?>
 
 <!DOCTYPE html>
@@ -20,7 +25,7 @@ include_once __DIR__ . "/functions.php"
         <form method="post" action="index.php">
             <div class="mb-3">
                 <label for="email">Inserisci qui la tua mail</label>
-                <input type="text" id="email" name="email" value="<?php echo $useremail; ?>" placeholder="indirizzo email">
+                <input type="text" id="email" name="email" value="<?php echo $_POST['email'] ?? '' ?>" placeholder="indirizzo email">
                 <span class="ms-4 alert <?php echo $messageAlert; ?>"><?php echo $message; ?></span>
             </div>
             <button class="btn btn-success" type="submit">Invia</button>
